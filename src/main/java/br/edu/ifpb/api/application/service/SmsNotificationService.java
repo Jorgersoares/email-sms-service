@@ -17,5 +17,11 @@ public class SmsNotificationService implements NotificationService {
         smsClient.login();
         smsClient.sendSms(target, body);
     }
+
+    @Override
+    public void send(String target, String body, String subject) {
+        // TODO Auto-generated method stub
+        
+    }
     
 }
