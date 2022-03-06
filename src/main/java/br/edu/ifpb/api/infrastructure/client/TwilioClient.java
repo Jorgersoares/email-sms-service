@@ -9,16 +9,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class TwilioClient {
 
-    public static final String ACCOUNT_SID = "ACa4e68433020cd358c0ba03f4c21a7dab";
-    public static final String AUTH_TOKEN = "d1572a7d599c7cdf69f93a54bcd3b5aa";
+    public static final String ACCOUNT_SID = "";
+    public static final String AUTH_TOKEN = "";
 
     public void login() {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
     }
 
     public Message sendSms(String phone, String body) {
-        PhoneNumber fromPhone = new PhoneNumber("+16176225843");
-        PhoneNumber toPhone = new PhoneNumber("+55".concat(phone));
+        PhoneNumber fromPhone = new PhoneNumber("");
+        PhoneNumber toPhone = new PhoneNumber("".concat(phone));
         return Message.creator(toPhone, fromPhone, body).create();
     }
     
